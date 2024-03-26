@@ -14,6 +14,7 @@ namespace tabbed_pages
         public MainPage()
         {
             InitializeComponent();
+            
         }
     }
 }

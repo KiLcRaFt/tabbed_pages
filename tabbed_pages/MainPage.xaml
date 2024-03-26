@@ -9,7 +9,7 @@
         <local:Talv/>
         <local:Kevad/>
         <local:Suvi/>
-        
+        <local:Sugis/>
     </TabbedPage.Children>
 
 </TabbedPage>

@@ -15,6 +15,26 @@ namespace tabbed_pages
 		public August ()
 		{
 			InitializeComponent ();
-		}
+            Grid grid = new Grid
+            {
+                RowDefinitions =
+                {
+                    new RowDefinition { Height = new GridLength(1, GridUnitType.Star) },
+                    new RowDefinition { Height = new GridLength(1, GridUnitType.Star) },
+                    new RowDefinition { Height = new GridLength(1, GridUnitType.Star) }
+                },
+                ColumnDefinitions =
+                {
+                    new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) }
+                }
+            };
+            Label lbl = new Label { Text = "August", FontSize = 36, VerticalOptions = LayoutOptions.CenterAndExpand, HorizontalOptions = LayoutOptions.CenterAndExpand };
+            Image img = new Image { Source = "august.jpg", Margin = 20 };
+            Label kirjeldus = new Label { Text = "August on kaheksandas aasta kuu!)!)!) \n Kolmas suvide kuu!!)!))", FontSize = 20, VerticalOptions = LayoutOptions.CenterAndExpand, HorizontalOptions = LayoutOptions.CenterAndExpand };
+            grid.Children.Add(lbl, 0, 0);
+            grid.Children.Add(img, 0, 1);
+            grid.Children.Add(kirjeldus, 0, 2);
+            this.Content = grid;
+        }
 	}
 }
